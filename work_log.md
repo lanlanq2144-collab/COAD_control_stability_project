@@ -2,7 +2,7 @@
 
 All dates and times in this work log are recorded in Korea Standard Time (KST), unless otherwise noted.
 
-This file documents the time I spend learning and building this project, including Python, GitHub, Kaggle, statistics, and research-related biomedical data analysis.
+This file documents the time I spend learning and building this project, including Python, GitHub, Kaggle, statistics, Claude Code, Chat GPT, and research-related biomedical data analysis.
 
 ---
 
