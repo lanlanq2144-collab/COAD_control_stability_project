@@ -8,7 +8,7 @@ This file documents the time I spend learning and building this project, includi
 
 ## May 31, 2026
 
-**Time spent:** ___ hours
+**Time spent:** 5 hours
 
 **What I worked on:**
 
@@ -41,7 +41,7 @@ This file documents the time I spend learning and building this project, includi
 
 ## June 1, 2026
 
-**Time spent:** ___ hours
+**Time spent:** 3.5 hours
 
 **What I worked on:**
 
