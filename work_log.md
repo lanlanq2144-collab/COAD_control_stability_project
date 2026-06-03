@@ -21,8 +21,8 @@ This file documents the time I spend learning and building this project, includi
 
 **Project motivation:**
 
-* I want this project to show my research interests before a possible future research opportunity connected to Georgia Tech.
-* I also want to develop a project that could potentially be expanded later with guidance from a Georgia Tech professor.
+* Dr. H mentioned that if I maintain strong academic performance through the fall semester, he may be able to help connect me with a Georgia Tech professor for a possible future research opportunity. Because of that, I want to use this project to clearly show my research interests, preparation, and ability to work independently before that opportunity.
+* I also want to build this project in a way that could potentially be expanded later with guidance from a Georgia Tech professor.
 * Another goal is to improve my ability to use Claude Code, Python, ChatGPT, GitHub, and data analysis tools in a practical engineering and research workflow.
 * I want to produce evidence of consistent effort and growth for Mr. Peters as part of my preparation for a possible winter internship opportunity.
 
