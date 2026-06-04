@@ -80,11 +80,11 @@ I subscribed to Claude Pro and used it for the first time. A significant portion
 
 - **PCA:** Compresses tens of thousands of gene expression values into a 2D plot. Each point is one sample, not one gene
 - **Volcano plot:** Each point is one gene, not one sample. X-axis shows how different a gene is between cancer and normal. Y-axis shows how statistically certain that difference is
-- **DEG:** A list of genes expressed differently between cancer and normal tissue. Each row in the output file is one gene
+- **DEG:** A list of genes expressed differently between cancer and normal tissue
 - **Batch effect:** A systematic difference caused by measurement environment, not biology
 - **ComBat:** A statistical method to remove batch effects. Not perfect — residual artifacts can remain
 - **Deep learning vs traditional ML:** LASSO and Random Forest are math-based models that run in minutes on a laptop. Not the same as training large language models
-- **AUC:** Measures how well a model separates two groups (0.5 = random chance, 1.0 = perfect separation)
+- **Python basics (from Kaggle):** print statements and basic arithmetic operations — understood. Functions — covered but still a bit confusing, need to review
 
 ### 🔬 Analysis completed today
 
@@ -96,7 +96,7 @@ Claude Code ran the full pipeline below. My role was to give instructions and as
 |---|---|
 | QC (PCA + ComBat batch correction) | Completed |
 | DEG analysis (4 control groups) | Tumor vs NAT: 11,623 / GTEx All: 17,562 / Transverse: 16,516 / Sigmoid: 19,298 |
-| Machine learning (LASSO + Random Forest) | AUC = 1.000 across all 4 comparisons |
+| Machine learning (LASSO + Random Forest) | Completed |
 | Biomarker stability (Venn diagrams) | NAT vs GTEx overlap: 1–2 genes / GTEx groups overlap: 5–8 genes |
 | Biological validation | 4 final biomarker candidates confirmed |
 
@@ -120,7 +120,8 @@ Two of the six final candidates showed almost no difference compared to NAT but 
 - The mathematical principles behind LASSO, Random Forest, and ComBat
 - How to interpret pathway analysis results beyond a basic level
 - Why survival analysis did not show significant results and what multivariate Cox regression would add
-- Whether AUC 1.000 reflects a real biological signal or is inflated by the analysis design
+- What AUC means and how to properly interpret the machine learning performance results
+- What each column in the DEG output file means (log2FC, p-value, padj, mean_tumor, mean_control)
 
 ### 🐛 Technical errors encountered
 
@@ -145,9 +146,55 @@ Claude Code ran the analysis. My role today was to give instructions, follow the
 
 ## Next Steps
 
+- [ ] Understand what AUC means and how to interpret machine learning performance results
+- [ ] Understand what each column in the DEG output file means (log2FC, p-value, padj, mean_tumor, mean_control)
 - [ ] Fill in empty tables in the report
 - [ ] Add AUC leakage limitation to methods
 - [ ] Strengthen ComBat methodology explanation
 - [ ] Fix reference formatting
 - [ ] Push everything to GitHub
 - [ ] Continue Kaggle — currently 2/5 chapters of Intro to Programming complete
+- [ ] Review Python functions — covered today but still confusing
+
+---
+
+## June 4, 2026 — Kaggle Python Fundamentals
+
+**Time spent:** 4 hours
+
+### What I worked on
+
+Continued Kaggle courses and spent time thinking about next steps for the research project.
+
+Completed Intro to Programming chapters 3, 4, and 5 — finished the full course. Started Python course and completed up to step 2 out of 7.
+
+### ✅ Concepts I understood for the first time today
+
+- **Data types:** int, float, and type() — understood the difference between number types
+- **Boolean logic:** True functions as 1 and False functions as 0
+- **Conditionals:** if, else, and elif — learned how to write conditional logic
+- **Indentation rules:** one level of indentation inside an if block, two levels inside a nested block
+- **= vs ==:** assignment vs comparison — understood the difference more clearly
+- **return:** understood what it actually means in a function and how to distinguish the function definition from its body
+- **Lists:** learned how to use lists to organize data, and understood the difference between storing items in a list vs storing them as a plain string
+- **List methods:** append and remove
+- **help() function:** learned that this can be used to look up how a function works
+- **docstring:** learned that this is the description written inside a function to explain what it does
+- **round(value, digits):** learned how to use this function and what each argument does
+
+### ❌ What I did not yet understand
+
+- Functions with a variable number of parameters — the concept of parameters in general is still confusing
+- Why the number of parameters in a function can change — this is where things started breaking down today
+
+### 📝 Honest note
+
+Functions were starting to make sense earlier in the day but became confusing again as the material got more complex. I plan to come back to the Intro to Programming course if I keep getting stuck in the Python course. The practice exercises in Intro to Programming were also harder than expected — got stuck there too.
+
+Still thinking through how to move the research project forward. No new analysis today.
+
+### ⏭️ Next session goals
+
+- [ ] Review functions and parameters until they feel solid
+- [ ] Continue Python course from step 3
+- [ ] Start thinking concretely about next steps for the research project
