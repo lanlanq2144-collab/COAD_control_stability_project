@@ -265,15 +265,15 @@ WORK_LOG.md → this file
 
 Most of today was understanding what the pipeline I built actually does. Claude Code ran the external validation and handled the GitHub push. My role was to ask questions, follow the logic of each step, and identify where I still had gaps. By the end of the session I could explain the full pipeline from QC to external validation in my own words.
 
-### ⏭️ Next session goals
+### ⏭️ Current Next Steps After GitHub Upload
 
-- [ ] Add external validation results to the report
-- [ ] Fill in empty tables in the report
-- [ ] Strengthen ComBat methodology explanation
-- [ ] Fix reference formatting
-- [ ] Continue Kaggle — Python course step 3 onward
-- [ ] Review functions and parameters
-
+- [ ] Add the final report as a PDF so it can be viewed easily without Apple Pages.
+- [ ] Remove or complete any empty files, such as `project_plan.md`.
+- [ ] Review each figure in the `results/` folder and make sure I can explain what it shows in my own words.
+- [ ] Re-read the README and work log to make sure they accurately describe what I did, what AI tools helped with, and what I personally learned.
+- [ ] Continue reviewing key concepts, especially PCA, batch effects, ComBat correction, DEG analysis, LASSO, Random Forest, AUC, and biomarker stability.
+- [ ] Prepare a short email to Mr. Peters with the GitHub link once the repository is clean and easy to follow.
+- [ ] Keep improving the project after feedback, especially if there are issues with reproducibility, interpretation, or presentation.
 ---
 
 ## Project Reflections
