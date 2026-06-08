@@ -1,4 +1,33 @@
+# ── raw & processed data (too large for GitHub) ──────────────────────────────
 data_raw/
 data_processed/
 metadata/
+
+# ── macOS system files ────────────────────────────────────────────────────────
 .DS_Store
+**/.DS_Store
+
+# ── Python artifacts ──────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+.ipynb_checkpoints/
+*.egg-info/
+dist/
+build/
+
+# ── environment files ─────────────────────────────────────────────────────────
+.env
+.venv/
+venv/
+env/
+
+# ── editor & OS ───────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+Thumbs.db
+
+# ── large result files (keep TSVs but ignore very large ones if needed) ───────
+# results/deg/*.tsv files are kept (they document findings)
