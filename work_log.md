@@ -198,3 +198,84 @@ Still thinking through how to move the research project forward. No new analysis
 - [ ] Review functions and parameters until they feel solid
 - [ ] Continue Python course from step 3
 - [ ] Start thinking concretely about next steps for the research project
+
+---
+
+## June 8, 2026 — Research Understanding + GitHub
+
+**Time spent:** 6 hours
+
+### What I worked on
+
+Went through the entire analysis pipeline step by step to understand what each stage actually did. Also completed external validation and pushed everything to GitHub.
+
+### ✅ Concepts I understood for the first time today
+
+- **QC purpose:** Confirming whether data can be trusted before analysis. PCA shows group separation; separation between same-type groups signals batch effect
+- **Batch effect:** Systematic difference caused by measurement environment, not biology. NAT and GTEx separated in PCA because they came from different institutions
+- **Why Tumor was excluded from ComBat:** Including Tumor would erase the real biological signal between cancer and normal
+- **DEG filtering logic:** Two conditions must both be met — |log2FC| > 1 (2x difference) and FDR < 0.05 (statistically certain). FDR is stricter than p-value because 60,498 genes are tested simultaneously
+- **log2FC direction:** Positive = higher in tumor, negative = higher in normal
+- **Volcano plot:** Each point is one gene. X-axis = how different, Y-axis = how certain. Top right = most important candidates
+- **Why 500 DEGs for ML input:** Too many features causes noise; top 500 by FDR are the most reliably different genes
+- **LASSO logic:** Zeros out unimportant genes, keeps only the most predictive ones. Two modes: strict (1–3 genes) and loose (19–40 genes)
+- **Random Forest logic:** 300 trees each vote; genes used most often across trees get high importance scores
+- **Why LASSO ∩ RF top-50:** Two methods with different approaches both agreeing on a gene means higher confidence
+- **Nested CV:** Fixes feature-selection leakage by doing DEG selection inside each training fold. AUC stayed 1.000 after correction — confirms genuine biological signal
+- **Venn diagram key finding:** NAT vs GTEx overlap only 1–2 genes. GTEx groups overlap 5–8 genes. Biomarker candidates change substantially depending on how "normal" is defined — this is the core finding of the study
+- **Why two artifact genes were removed:** ENSG00000279473 (retired Ensembl ID) and HMGN1P36 (pseudogene) both showed near-zero log2FC vs NAT but extreme log2FC vs GTEx — pattern consistent with batch effect artifact, not biology
+- **Final 4 biomarkers:** CDH3, CLDN1, ETV4, KRT80 — all upregulated in tumor, all confirmed in prior literature, CDH3+ETV4+CLDN1 combination independently replicated by Guo et al. 2022
+- **Why survival analysis showed no significant results:** Single gene median split is too simple. Survival is determined by many factors (stage, age, treatment). Cox regression with covariates would be needed
+- **Liquid biopsy:** Blood or stool-based cancer detection already exists (Cologuard, Guardant Shield). Main barriers are cost, false positives, and lack of standardization
+
+### 🔬 Analysis completed today
+
+**External validation (GSE156451)**
+
+Independently validated all 4 biomarker candidates in a Chinese CRC cohort (n=72 paired samples) from Wuhan University.
+
+| Gene | log₂FC | p-value |
+|---|---|---|
+| CDH3 | +3.16 | 1.1×10⁻³⁶ |
+| CLDN1 | +3.35 | 7.8×10⁻³⁵ |
+| ETV4 | +4.08 | 2.8×10⁻⁴⁴ |
+| KRT80 | +2.61 | 1.5×10⁻³¹ |
+
+All 4 genes replicated in a completely independent dataset from a different country, different hospital, different equipment.
+
+**GitHub**
+
+Pushed the full project to GitHub including scripts, results, README, and WORK_LOG.
+
+```
+scripts/   → 11 analysis scripts
+results/   → 83 files across all analysis stages
+README.md  → project overview
+WORK_LOG.md → this file
+```
+
+### ❌ What I still do not fully understand
+
+- The mathematical principles behind LASSO, Random Forest, and ComBat
+- How to interpret pathway analysis results beyond a basic level
+- Why survival analysis showed no significant results and what Cox regression would add
+- How to write the code myself without Claude Code
+
+### 📝 Honest note
+
+Most of today was understanding what the pipeline I built actually does. Claude Code ran the external validation and handled the GitHub push. My role was to ask questions, follow the logic of each step, and identify where I still had gaps. By the end of the session I could explain the full pipeline from QC to external validation in my own words.
+
+The goal for Kaggle is not to write code from scratch, but to be able to read code and understand roughly what it is doing. Claude Code handles the execution. My role is to understand the content, ask questions, and identify problems or gaps to improve.
+
+Throughout this project I gave instructions to Claude Code as ideas came to me, without formally recording the decision-making process. Going forward I want to be more deliberate about documenting why certain decisions were made, not just what was done.
+
+Currently balancing three things: summer courses (Calculus 2, Linear Algebra, English Composition 2, US History), driving lessons, and this project. Keeping these separate and managing time well is important. Project sessions will be focused and deliberate rather than open-ended.
+
+### ⏭️ Next session goals
+
+- [ ] Add external validation results to the report
+- [ ] Fill in empty tables in the report
+- [ ] Strengthen ComBat methodology explanation
+- [ ] Fix reference formatting
+- [ ] Continue Kaggle — Python course step 3 onward
+- [ ] Review functions and parameters
