@@ -1,0 +1,5 @@
+comparison	n_tumor	n_control	lasso_auc_leaked	rf_auc_leaked	lasso_auc_corrected	rf_auc_corrected	lasso_auc_delta	rf_auc_delta	avg_lasso_genes_per_fold	bio_lasso_genes
+Tumor_vs_TCGA_NAT	288	41	1.0	1.0	1.0	1.0	0.0	0.0	6.2	18
+Tumor_vs_GTEx_All	288	308	1.0	1.0	1.0	1.0	0.0	0.0	1.8	40
+Tumor_vs_GTEx_Colon_Transverse	288	167	1.0	1.0	1.0	1.0	0.0	0.0	1.2	27
+Tumor_vs_GTEx_Colon_Sigmoid	288	141	1.0	1.0	1.0	1.0	0.0	0.0	1.0	34
