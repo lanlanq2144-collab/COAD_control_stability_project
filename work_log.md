@@ -160,7 +160,7 @@ Claude Code ran the analysis. My role today was to give instructions, follow the
 
 ## June 4, 2026 — Kaggle Python Fundamentals
 
-**Time spent:** 4 hours
+**Time spent:** 4 hours (Kaggle) + 3 hours (project thinking)
 
 ### What I worked on
 
@@ -203,7 +203,7 @@ Still thinking through how to move the research project forward. No new analysis
 
 ## June 8, 2026 — Research Understanding + GitHub
 
-**Time spent:** 6 hours
+**Time spent:** 7 hours
 
 ### What I worked on
 
@@ -265,12 +265,6 @@ WORK_LOG.md → this file
 
 Most of today was understanding what the pipeline I built actually does. Claude Code ran the external validation and handled the GitHub push. My role was to ask questions, follow the logic of each step, and identify where I still had gaps. By the end of the session I could explain the full pipeline from QC to external validation in my own words.
 
-The goal for Kaggle is not to write code from scratch, but to be able to read code and understand roughly what it is doing. Claude Code handles the execution. My role is to understand the content, ask questions, and identify problems or gaps to improve.
-
-Throughout this project I gave instructions to Claude Code as ideas came to me, without formally recording the decision-making process. Going forward I want to be more deliberate about documenting why certain decisions were made, not just what was done.
-
-Currently balancing three things: summer courses (Calculus 2, Linear Algebra, English Composition 2, US History), driving lessons, and this project. Keeping these separate and managing time well is important. Project sessions will be focused and deliberate rather than open-ended.
-
 ### ⏭️ Next session goals
 
 - [ ] Add external validation results to the report
@@ -279,3 +273,33 @@ Currently balancing three things: summer courses (Calculus 2, Linear Algebra, En
 - [ ] Fix reference formatting
 - [ ] Continue Kaggle — Python course step 3 onward
 - [ ] Review functions and parameters
+
+---
+
+## Project Reflections
+
+### Honest thoughts after wrapping up this first project
+
+**On having no mentor**
+
+Without a supervisor or lab, I spent more time thinking about the project outside of actual work sessions than inside them. Ideas would come to me randomly — something I thought was a breakthrough — and when I looked it up, it was either already done, not feasible, or both. I felt the limits of working alone constantly. A mentor would have saved me from a lot of dead ends.
+
+**On Python and code**
+
+I went in thinking Python was supposed to be easy. It is not easy, at least not at the level I was trying to understand it. I tried to work toward understanding the code Claude Code produced, but I quickly realized that getting from where I am now to that level of understanding is going to take a very long time. I also realized that free resources online are not enough to get to the depth I want. That limitation became very obvious very fast.
+
+**On biology**
+
+I thought I had a reasonable foundation in life sciences going into this. I did not. Concepts like pseudogenes stopped me completely — I had no idea what they were. I also did not understand how much interpretation matters at every step. The method you choose at one stage completely shapes what is possible at the next. Because I do not know enough, I could have been heading in a wrong direction without any way to notice.
+
+**On the project timeline**
+
+I originally planned for three to four months. The further I got in, the more I understood that sustaining a project for that long, with no structure or external accountability, is genuinely difficult. It is a different kind of hard than I expected.
+
+**On Claude Code**
+
+The idea generation was mine. Claude Code executed those ideas quickly. But the token usage was much faster than I anticipated, and I realized I am not using the tool at anywhere near its full capability yet. There is a gap between giving it instructions and actually knowing how to direct it well.
+
+**On whether this approach is right**
+
+I want to know: is this actually how independent research is supposed to work? And in a real research or engineering setting, how do people actually do this kind of work day to day — how structured is it, how do they handle not knowing things, how do they know when a direction is wrong? I genuinely do not know the answer to any of that yet.
