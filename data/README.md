@@ -28,6 +28,40 @@ Download each dataset from the sources below and place them in the appropriate f
 
 ---
 
+## Quick setup (helper scripts)
+
+Direct download + group definitions are scripted so the pipeline is reproducible
+from a clean clone:
+
+```bash
+python tools/fetch_data.py        # downloads the 3 files into data_raw/ (1.3 GB matrix + phenotype + GEO tar)
+python tools/build_sample_ids.py  # writes data_processed/sample_ids/*.txt from the phenotype
+```
+
+Direct URLs (UCSC Xena Toil hub / NCBI GEO):
+
+- `https://toil-xena-hub.s3.us-east-1.amazonaws.com/download/TcgaTargetGtex_rsem_gene_tpm.gz`
+- `https://toil-xena-hub.s3.us-east-1.amazonaws.com/download/TcgaTargetGTEX_phenotype.txt.gz`
+- `https://ftp.ncbi.nlm.nih.gov/geo/series/GSE156nnn/GSE156451/suppl/GSE156451_RAW.tar`
+
+### Sample selection (the group definitions)
+
+The four groups are defined by these phenotype filters (verified to reproduce the
+exact group sizes used in the analysis):
+
+| Group | n | Filter (`TcgaTargetGTEX_phenotype.txt`) |
+|---|---:|---|
+| TCGA_COAD_Tumor | 288 | `detailed_category == "Colon Adenocarcinoma"` & `_sample_type == "Primary Tumor"` |
+| TCGA_COAD_NAT | 41 | `detailed_category == "Colon Adenocarcinoma"` & `_sample_type == "Solid Tissue Normal"` |
+| GTEx_Colon_Transverse | 167 | `_study == "GTEX"` & `primary disease or tissue == "Colon - Transverse"` |
+| GTEx_Colon_Sigmoid | 141 | `_study == "GTEX"` & `primary disease or tissue == "Colon - Sigmoid"` |
+
+The resulting sample-ID lists are version-controlled in [`data/sample_ids/`](sample_ids/)
+for provenance. `extract_coad_matrix.py` reads them from `data_processed/sample_ids/`,
+so copy them there (or just run `tools/build_sample_ids.py`, which writes them directly).
+
+---
+
 ## Folder Structure (after download)
 
 ```

@@ -4,7 +4,9 @@ scipy
 scikit-learn
 statsmodels
 matplotlib
+matplotlib-venn
 seaborn
 neuroCombat
 lifelines
 mygene
+requests
